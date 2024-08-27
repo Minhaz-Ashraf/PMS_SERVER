@@ -1,0 +1,282 @@
+[
+  {
+    "model": "Hector Diesel",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "19,864",
+    "twentyFourMonthPerhundredK_KMS": "32,831",
+    "twelveMonthPerUnlimited_KMS": "23,254",
+    "twentyFourMonthPerUnlimited_KMS": "36,220"
+  },
+  {
+    "model": "Hector Diesel",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "21,305",
+    "twentyFourMonthPerhundredK_KMS": "35,458",
+    "twelveMonthPerUnlimited_KMS": "25,034",
+    "twentyFourMonthPerUnlimited_KMS": "39,186"
+  },
+  {
+    "model": "Hector Diesel",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "22,068",
+    "twentyFourMonthPerhundredK_KMS": "36,814",
+    "twelveMonthPerUnlimited_KMS": "25,966",
+    "twentyFourMonthPerUnlimited_KMS": "40,712"
+  },
+  {
+    "model": "Hector Diesel",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "25,068",
+    "twentyFourMonthPerhundredK_KMS": "42,314",
+    "twelveMonthPerUnlimited_KMS": "29,666",
+    "twentyFourMonthPerUnlimited_KMS": "46,912"
+  },
+  {
+    "model": "Hector Diesel",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "28,868",
+    "twentyFourMonthPerhundredK_KMS": "49,114",
+    "twelveMonthPerUnlimited_KMS": "34,366",
+    "twentyFourMonthPerUnlimited_KMS": "54,612"
+  },
+  {
+    "model": "Hector Petrol",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "19,017",
+    "twentyFourMonthPerhundredK_KMS": "30,288",
+    "twelveMonthPerUnlimited_KMS": "22,407",
+    "twentyFourMonthPerUnlimited_KMS": "33,678"
+  },
+  {
+    "model": "Hector Petrol",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "20,373",
+    "twentyFourMonthPerhundredK_KMS": "32,661",
+    "twelveMonthPerUnlimited_KMS": "24,102",
+    "twentyFourMonthPerUnlimited_KMS": "36,390"
+  },
+  {
+    "model": "Hector Petrol",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "21,051",
+    "twentyFourMonthPerhundredK_KMS": "33,847",
+    "twelveMonthPerUnlimited_KMS": "24,949",
+    "twentyFourMonthPerUnlimited_KMS": "37,746"
+  },
+  {
+    "model": "Hector Petrol",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "23,851",
+    "twentyFourMonthPerhundredK_KMS": "38,847",
+    "twelveMonthPerUnlimited_KMS": "28,449",
+    "twentyFourMonthPerUnlimited_KMS": "43,346"
+  },
+  {
+    "model": "Hector Petrol",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "27,351",
+    "twentyFourMonthPerhundredK_KMS": "45,047",
+    "twelveMonthPerUnlimited_KMS": "32,849",
+    "twentyFourMonthPerUnlimited_KMS": "50,446"
+  },
+  {
+    "model": "Astor - Manual/CVT",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "15,034",
+    "twentyFourMonthPerhundredK_KMS": "20,034",
+    "twelveMonthPerUnlimited_KMS": "18,424",
+    "twentyFourMonthPerUnlimited_KMS": "23,424"
+  },
+  {
+    "model": "Astor - Manual/CVT",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "16,051",
+    "twentyFourMonthPerhundredK_KMS": "21,475",
+    "twelveMonthPerUnlimited_KMS": "19,780",
+    "twentyFourMonthPerUnlimited_KMS": "25,203"
+  },
+  {
+    "model": "Astor - Manual/CVT",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "16,559",
+    "twentyFourMonthPerhundredK_KMS": "22,237",
+    "twelveMonthPerUnlimited_KMS": "20,458",
+    "twentyFourMonthPerUnlimited_KMS": "26,136"
+  },
+  {
+    "model": "Astor - Manual/CVT",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "18,659",
+    "twentyFourMonthPerhundredK_KMS": "25,237",
+    "twelveMonthPerUnlimited_KMS": "23,258",
+    "twentyFourMonthPerUnlimited_KMS": "29,836"
+  },
+  {
+    "model": "Astor - Manual/CVT",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "21,359",
+    "twentyFourMonthPerhundredK_KMS": "29,037",
+    "twelveMonthPerUnlimited_KMS": "26,758",
+    "twentyFourMonthPerUnlimited_KMS": "34,536"
+  },
+  {
+    "model": "Astor - Automatic",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "15,881",
+    "twentyFourMonthPerhundredK_KMS": "20,881",
+    "twelveMonthPerUnlimited_KMS": "19,271",
+    "twentyFourMonthPerUnlimited_KMS": "23,424"
+  },
+  {
+    "model": "Astor - Automatic",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "16,983",
+    "twentyFourMonthPerhundredK_KMS": "22,407",
+    "twelveMonthPerUnlimited_KMS": "20,712",
+    "twentyFourMonthPerUnlimited_KMS": "25,203"
+  },
+  {
+    "model": "Astor - Automatic",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "17,576",
+    "twentyFourMonthPerhundredK_KMS": "23,169",
+    "twelveMonthPerUnlimited_KMS": "21,475",
+    "twentyFourMonthPerUnlimited_KMS": "26,136"
+  },
+  {
+    "model": "Astor - Automatic",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "19,876",
+    "twentyFourMonthPerhundredK_KMS": "26,269",
+    "twelveMonthPerUnlimited_KMS": "24,475",
+    "twentyFourMonthPerUnlimited_KMS": "29,836"
+  },
+  {
+    "model": "Astor - Automatic",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "22,776",
+    "twentyFourMonthPerhundredK_KMS": "30,269",
+    "twelveMonthPerUnlimited_KMS": "28,275",
+    "twentyFourMonthPerUnlimited_KMS": "34,536"
+  },
+  {
+    "model": "Gloster",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "38,169",
+    "twentyFourMonthPerhundredK_KMS": "60,719",
+    "twelveMonthPerUnlimited_KMS": "39,864",
+    "twentyFourMonthPerUnlimited_KMS": "67,414"
+  },
+  {
+    "model": "Gloster",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "41,475",
+    "twentyFourMonthPerhundredK_KMS": "66,225",
+    "twelveMonthPerUnlimited_KMS": "43,339",
+    "twentyFourMonthPerUnlimited_KMS": "73,389"
+  },
+  {
+    "model": "Gloster",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "43,085",
+    "twentyFourMonthPerhundredK_KMS": "68,835",
+    "twelveMonthPerUnlimited_KMS": "45,034",
+    "twentyFourMonthPerUnlimited_KMS": "76,484"
+  },
+  {
+    "model": "Gloster",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "49,885",
+    "twentyFourMonthPerhundredK_KMS": "81,935",
+    "twelveMonthPerUnlimited_KMS": "52,134",
+    "twentyFourMonthPerUnlimited_KMS": "91,284"
+  },
+  {
+    "model": "Gloster",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "58,385",
+    "twentyFourMonthPerhundredK_KMS": "98,235",
+    "twelveMonthPerUnlimited_KMS": "61,134",
+    "twentyFourMonthPerUnlimited_KMS": "1,09,884"
+  },
+  {
+    "model": "Comet EV",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "18,254",
+    "twentyFourMonthPerhundredK_KMS": "32,661",
+    "twelveMonthPerUnlimited_KMS": "19,525",
+    "twentyFourMonthPerUnlimited_KMS": "34,356"
+  },
+  {
+    "model": "Comet EV",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "19,610",
+    "twentyFourMonthPerhundredK_KMS": "35,288",
+    "twelveMonthPerUnlimited_KMS": "21,051",
+    "twentyFourMonthPerUnlimited_KMS": "37,153"
+  },
+  {
+    "model": "Comet EV",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "20,288",
+    "twentyFourMonthPerhundredK_KMS": "36,644",
+    "twelveMonthPerUnlimited_KMS": "21,814",
+    "twentyFourMonthPerUnlimited_KMS": "38,593"
+  },
+  {
+    "model": "Comet EV",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "23,088",
+    "twentyFourMonthPerhundredK_KMS": "42,144",
+    "twelveMonthPerUnlimited_KMS": "24,914",
+    "twentyFourMonthPerUnlimited_KMS": "44,393"
+  },
+  {
+    "model": "Comet EV",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "26,588",
+    "twentyFourMonthPerhundredK_KMS": "48,944",
+    "twelveMonthPerUnlimited_KMS": "28,714",
+    "twentyFourMonthPerUnlimited_KMS": "51,693"
+  },
+  {
+    "model": "ZSEV",
+    "entryAge": "0-30",
+    "twelveMonthPerhundredK_KMS": "22,915",
+    "twentyFourMonthPerhundredK_KMS": "33,932",
+    "twelveMonthPerUnlimited_KMS": "26,305",
+    "twentyFourMonthPerUnlimited_KMS": "35,627"
+  },
+  {
+    "model": "ZSEV",
+    "entryAge": "31-180",
+    "twelveMonthPerhundredK_KMS": "24,695",
+    "twentyFourMonthPerhundredK_KMS": "36,644",
+    "twelveMonthPerUnlimited_KMS": "28,424",
+    "twentyFourMonthPerUnlimited_KMS": "38,508"
+  },
+  {
+    "model": "ZSEV",
+    "entryAge": "181-365",
+    "twelveMonthPerhundredK_KMS": "25,627",
+    "twentyFourMonthPerhundredK_KMS": "38,000",
+    "twelveMonthPerUnlimited_KMS": "29,525",
+    "twentyFourMonthPerUnlimited_KMS": "39,949"
+  },
+  {
+    "model": "ZSEV",
+    "entryAge": "366-700",
+    "twelveMonthPerhundredK_KMS": "29,327",
+    "twentyFourMonthPerhundredK_KMS": "43,600",
+    "twelveMonthPerUnlimited_KMS": "34,025",
+    "twentyFourMonthPerUnlimited_KMS": "45,949"
+  },
+  {
+    "model": "ZSEV",
+    "entryAge": "731-1065",
+    "twelveMonthPerhundredK_KMS": "34,027",
+    "twentyFourMonthPerhundredK_KMS": "50,700",
+    "twelveMonthPerUnlimited_KMS": "39,525",
+    "twentyFourMonthPerUnlimited_KMS": "53,449"
+  }
+]

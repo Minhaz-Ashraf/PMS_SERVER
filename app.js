@@ -5,6 +5,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const helmet = require("helmet");
 let router = express.Router();
+const { initializeRoutes } = require('./routes/index');
 http = require("http");
 
 
@@ -30,8 +31,9 @@ async function startServer() {
     app.use(helmet({ crossOriginResourcePolicy: false }));
     app.use(morgan("common"));
     app.use(cors());
-    app.use(router);
+    initializeRoutes(app);
     const server = http.createServer(app);
+    app.use(router);
   
     app.use("/running-status", (req, res) => {
       res.status(200).send("API is connected");

@@ -1,10 +1,10 @@
-const jwt = require("jwt");
+const jwt = require("jsonwebtoken");
 const userSchema = require("../model/User");
 const dotenv = require("dotenv");
 
 dotenv.config();
 
-export const authCheck = async (req, res, next) => {
+exports.authCheck = async (req, res, next) => {
   try {
     const authHeader = req.get("AutherizationHeader");
     if (!authHeader) {

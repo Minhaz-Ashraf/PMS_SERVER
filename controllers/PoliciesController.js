@@ -1,6 +1,10 @@
+const mgData = require("../model/data");
 const Policy = require("../model/Policies");
 const User = require("../model/User");
-export const policyFormData = async (req, res) => {
+
+
+
+exports.policyFormData = async (req, res) => {
   try {
     const { userId, ...policyData } = req.body;
     const user = await User.findById(userId);
@@ -19,7 +23,7 @@ export const policyFormData = async (req, res) => {
   }
 };
 
-export const editPolicy = async (req, res) => {
+exports.editPolicy = async (req, res) => {
   try {
     const { id } = req.params;
     const updatedData = req.body;
@@ -37,7 +41,7 @@ export const editPolicy = async (req, res) => {
   }
 };
 
-export const deletePolicy = async (req, res) => {
+exports.deletePolicy = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -52,7 +56,7 @@ export const deletePolicy = async (req, res) => {
   }
 };
 
-export const getAllPolicy = async (req, res) => {
+exports.getAllPolicy = async (req, res) => {
   try {
     const policies = await Policy.find();
     if (policies.length === 0) {
@@ -65,9 +69,9 @@ export const getAllPolicy = async (req, res) => {
   }
 };
 
-export const getMgPolicies = async (req, res) => {
+exports.getMgPolicies = async (req, res) => {
   try {
-    const mgPolicies = await Policy.find({ policyType: "MG" });
+    const mgPolicies = await Policy.find({ policyType: "1" });
     if (mgPolicies.length === 0) {
       return res.status(404).json({ message: "No MG policies found" });
     }
@@ -80,9 +84,9 @@ export const getMgPolicies = async (req, res) => {
   }
 };
 
-export const getMbPolicies = async (req, res) => {
+exports.getMbPolicies = async (req, res) => {
   try {
-    const mbPolicies = await Policy.find({ policyType: "MB" });
+    const mbPolicies = await Policy.find({ policyType: "2" });
 
     if (mbPolicies.length === 0) {
       return res.status(404).json({ message: "No MB policies found" });
@@ -98,7 +102,7 @@ export const getMbPolicies = async (req, res) => {
 };
 
 
-export const disablePolicy = async (req, res) => {
+exports.disablePolicy = async (req, res) => {
   try {
     const { policyId } = req.params;
 
@@ -125,3 +129,84 @@ export const disablePolicy = async (req, res) => {
     res.status(500).json({ message: 'Something went wrong', error: err });
   }
 };
+
+
+
+exports.getMgOptions = async(req, res) =>{
+  try{
+   const mgOptions = await mgData.find();
+   res.status(200).json({mgOptions})
+  }catch(err){
+    console.error(err);
+    res.status(500).json({message: "Something went wrong"});
+  }
+}
+
+
+
+exports.updatePolicyStatus = async (req, res) => {
+  try {
+    const { id } = req.params; 
+    const { type, ...policyData } = req.body; 
+    const validTypes = ["yetToApproved", "approved", "rejected"];
+
+    if (!validTypes.includes(type)) {
+      return res.status(400).json({ message: "Invalid policy type." });
+    }
+
+    const policy = await Policy.findById(id);
+    if (!policy) {
+      return res.status(404).json({ message: "Policy not found." });
+    }
+
+    const requiredFields = [
+      "policyType",
+      "userId",
+      "customerName",
+      "address",
+      "contactNumber",
+      "vehicle",
+      "vehicleManufacturer",
+      "vehicleModel",
+      "vehicleIdNumber",
+      "vehicleFirstRegDate",
+      "extWarrantyStartDate",
+      "extWarrantyEndDate",
+      "product",
+      "productPrice",
+      "totalPrice",
+    ];
+
+    for (let field of requiredFields) {
+      if (!policyData[field] && !policy[field]) {
+        return res.status(400).json({ message: `The field ${field} is required.` });
+      }
+    }
+
+    // Generating policyId 
+    if (!policy.policyId) {
+      const currentYear = new Date().getFullYear();
+      const policyCount = await Policy.countDocuments();
+      const policyId = `360-RG-${currentYear}-${(policyCount + 1).toString().padStart(4, "0")}`;
+      policy.policyId = policyId;
+    }
+
+    // Update the policy status
+    policy.policyStatus = type;
+    policy.approvedAt = type === "approved" ? new Date() : policy.approvedAt;
+
+    // Updating chnged fields 
+    Object.keys(policyData).forEach((key) => {
+      policy[key] = policyData[key];
+    });
+
+    await policy.save();
+
+    return res.status(200).json({ message: "Policy Status Changed Successfully.", policy });
+  } catch (error) {
+    return res.status(500).json({ message: "Internal Server Error", error: error.message });
+  }
+};
+
+
+

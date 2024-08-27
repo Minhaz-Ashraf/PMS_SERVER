@@ -5,7 +5,7 @@ const fs = require("fs");
 const json2csv = require("json2csv").parse;
 dotenv.config();
 
-export const signinController = async (req, res) => {
+exports.signinController = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -37,7 +37,7 @@ export const signinController = async (req, res) => {
   }
 };
 
-export const addAgent = async (req, res) => {
+exports.addAgent = async (req, res) => {
   try {
     const agentData = req.body;
 
@@ -51,16 +51,14 @@ export const addAgent = async (req, res) => {
     const newAgent = new userSchema(agentData);
     await newAgent.save();
 
-    res
-      .status(201)
-      .json({ message: "Agent added successfully", data: newAgent });
+    res.status(201).json({ message: "Agent added successfully", data: newAgent });
   } catch (err) {
-    console.error("Error saving agent data:", err);
+    console.log("Error saving agent data:", err);
     res.status(500).json({ message: "Something went wrong", error: err });
   }
 };
 
-export const editAgent = async (req, res) => {
+exports.editAgent = async (req, res) => {
   try {
     const { id } = req.params;
     const updatedData = req.body;
@@ -83,7 +81,7 @@ export const editAgent = async (req, res) => {
   }
 };
 
-export const deleteAgent = async (req, res) => {
+exports.deleteAgent = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -100,7 +98,7 @@ export const deleteAgent = async (req, res) => {
   }
 };
 
-export const getAllAgents = async (req, res) => {
+exports.getAllAgents = async (req, res) => {
   try {
     const agents = await userSchema.find();
 
@@ -116,9 +114,9 @@ export const getAllAgents = async (req, res) => {
   }
 };
 
-export const getMGagent = async (req, res) => {
+exports.getMGagent = async (req, res) => {
   try {
-    const mgAgents = await userSchema.findAll({ roleType: "MB" });
+    const mgAgents = await userSchema.find({ roleType: "1" });
     if (mgAgents.length === 0) {
       return res.status(404).json({ message: "No MG agents found" });
     }
@@ -129,13 +127,13 @@ export const getMGagent = async (req, res) => {
   }
 };
 
-export const getMBagent = async (req, res) => {
+exports.getMBagent = async (req, res) => {
   try {
-    const mgAgents = await userSchema.findAll({ roleType: "MG" });
-    if (mgAgents.length === 0) {
+    const mbAgents = await userSchema.find({ roleType: "2" });
+    if (mbAgents.length === 0) {
       return res.status(404).json({ message: "No MG agents found" });
     }
-    res.status(200).json({ message: "All MG Agents data", mgAgents });
+    res.status(200).json({ message: "All MB Agents data", mbAgents });
   } catch (err) {
     console.error("Error while getting MG agents:", err);
     res.status(500).json({ message: "Something went wrong", error: err });

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.schema(
+const userSchema = mongoose.Schema(
   {
     brandName: { type: String, required: false },
     agentId: { type: String, required: false },
@@ -12,8 +12,8 @@ const userSchema = mongoose.schema(
     roleType: {
       type: String,
       required: false,
-      enum: ["admin", "MG", "MB"],
-      default: "MG",
+      enum: ["0", "1", "2"],
+      default: "2",
     },
   },
   { timestamps: true }
