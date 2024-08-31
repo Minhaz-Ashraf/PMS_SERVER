@@ -119,7 +119,7 @@ exports.editAgent = async (req, res) => {
 exports.deleteAgent = async (req, res) => {
   try {
     const { id } = req.params;
-
+    
     const deletedAgent = await userSchema.findByIdAndDelete(id);
 
     if (!deletedAgent) {
