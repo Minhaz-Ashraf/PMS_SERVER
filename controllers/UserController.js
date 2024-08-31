@@ -37,6 +37,39 @@ exports.signinController = async (req, res) => {
   }
 };
 
+exports.getUsersData = async (req, res) => {
+  try {
+    const user = req.user;
+
+    if (!user) {
+      return res.status(401).json({ message: "User not authenticated" });
+    }
+
+    const { password, confirmPassword, ...userData } = user.toObject();
+
+    res.status(200).json(userData);
+  } catch (err) {
+    console.error("Error fetching user data:", err);
+    res.status(500).json({ message: "Failed to fetch user data" });
+  }
+};
+
+exports.getUserById = async (req, res) => {
+  const { userId } = req.params;
+  console.log(`Fetching data for userId: ${userId}`);
+  try {
+    const user = await userSchema.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    const { password, confirmPassword, ...userData } = user.toObject();
+    res.status(200).json(userData);
+  } catch (err) {
+    console.error("Error fetching user data:", err);
+    res.status(500).json({ message: "Failed to fetch user data" });
+  } 
+};
+
 exports.addAgent = async (req, res) => {
   try {
     const agentData = req.body;
@@ -51,7 +84,9 @@ exports.addAgent = async (req, res) => {
     const newAgent = new userSchema(agentData);
     await newAgent.save();
 
-    res.status(201).json({ message: "Agent added successfully", data: newAgent });
+    res
+      .status(201)
+      .json({ message: "Agent added successfully", data: newAgent });
   } catch (err) {
     console.log("Error saving agent data:", err);
     res.status(500).json({ message: "Something went wrong", error: err });

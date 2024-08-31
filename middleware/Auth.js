@@ -4,9 +4,17 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+
+
+
+
+
+
+
+
 exports.authCheck = async (req, res, next) => {
   try {
-    const authHeader = req.get("AutherizationHeader");
+    const authHeader = req.get("Authorization");
     if (!authHeader) {
       const error = new Error("Not Authenticated");
       error.statuscode = 401;
@@ -33,7 +41,7 @@ exports.authCheck = async (req, res, next) => {
       next();
     });
   } catch (err) {
-    console.error("Auth Error", err);
+    console.log("Auth Error", err);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
